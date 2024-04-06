@@ -5,8 +5,13 @@ public class Principal {
         filmeUm.anoDeLancamento = 2001;
         filmeUm.duracaoEmMinutos = 106;
 
-
-        System.out.println(filmeUm.nome);
-        System.out.println(filmeUm.anoDeLancamento);
+        filmeUm.exibirFichaTecnica();
+        filmeUm.avalia(8);
+        filmeUm.avalia(9);
+        filmeUm.avalia(7);
+        filmeUm.avalia(10);
+        filmeUm.avalia(6);
+        System.out.println(filmeUm.somaDasAvaliacoes);
+        System.out.println(filmeUm.totalDeAvaliacoes);
     }
 }
