@@ -1,3 +1,5 @@
+import br.com.rr.catalogofilmes.modelos.Filme;
+
 public class Principal {
     public static void main(String[] args) {
         Filme filmeUm = new Filme();
@@ -11,8 +13,7 @@ public class Principal {
         filmeUm.avalia(7);
         filmeUm.avalia(10);
         filmeUm.avalia(6);
-        System.out.println(filmeUm.somaDasAvaliacoes);
-        System.out.println(filmeUm.totalDeAvaliacoes);
+        System.out.println("Total de avaliações: " + filmeUm.getTotalDeAvaliacoes());
         System.out.println(filmeUm.retornaMedia());
     }
 }
