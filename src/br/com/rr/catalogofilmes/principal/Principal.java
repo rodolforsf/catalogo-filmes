@@ -1,3 +1,5 @@
+package br.com.rr.catalogofilmes.principal;
+
 import br.com.rr.catalogofilmes.calculos.CalculadoraDeTempo;
 import br.com.rr.catalogofilmes.calculos.FiltroRecomendacao;
 import br.com.rr.catalogofilmes.modelos.Episodio;
@@ -8,10 +10,11 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filmeUm = new Filme("Velozes e Furiosos");
+        Filme filmeUm = new Filme("Velozes e Furiosos",2001);
        // filmeUm.setNome("Velozes e Furiosos");
         filmeUm.setAnoDeLancamento(2001);
         filmeUm.setDuracaoEmMinutos(106);
+        filmeUm.avalia(9);
 
         filmeUm.exibirFichaTecnica();
         filmeUm.avalia(8);
@@ -35,6 +38,7 @@ public class Principal {
         //filmeDois.setNome("O Exterminador do Futuro");
         //filmeDois.setAnoDeLancamento(1984);
         filmeDois.setDuracaoEmMinutos(107);
+        filmeDois.avalia(10);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(filmeUm);
