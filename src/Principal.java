@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filmeUm = new Filme();
-        filmeUm.setNome("Velozes e Furiosos");
+        Filme filmeUm = new Filme("Velozes e Furiosos");
+       // filmeUm.setNome("Velozes e Furiosos");
         filmeUm.setAnoDeLancamento(2001);
         filmeUm.setDuracaoEmMinutos(106);
 
@@ -22,18 +22,18 @@ public class Principal {
         System.out.println("Total de avaliações: " + filmeUm.getTotalDeAvaliacoes());
         System.out.println(filmeUm.retornaMedia());
 
-        Serie serieUm = new Serie();
-        serieUm.setNome("La Casa de Papel");
-        serieUm.setAnoDeLancamento(2017);
+        Serie serieUm = new Serie("La Casa de Papel", 2017);
+        //serieUm.setNome("La Casa de Papel");
+        //serieUm.setAnoDeLancamento(2017);
         serieUm.exibirFichaTecnica();
         serieUm.setTemporadas(5);
         serieUm.setEpisodiosPorTemporada(8);
         serieUm.setMinutosPorEpisodio(50);
         System.out.println("Duração da serie em minutos: " + serieUm.getDuracaoEmMinutos());
 
-        Filme filmeDois = new Filme();
-        filmeDois.setNome("O Exterminador do Futuro");
-        filmeDois.setAnoDeLancamento(1984);
+        Filme filmeDois = new Filme("O Exterminador do Futuro", 1984);
+        //filmeDois.setNome("O Exterminador do Futuro");
+        //filmeDois.setAnoDeLancamento(1984);
         filmeDois.setDuracaoEmMinutos(107);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -51,9 +51,9 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeTres = new Filme("À Espera de um Milagre");
+        var filmeTres = new Filme("À Espera de um Milagre", 1999);
         //filmeTres.setNome("À Espera de um Milagre");
-        filmeTres.setAnoDeLancamento(1999);
+        //filmeTres.setAnoDeLancamento(1999);
         filmeTres.setDuracaoEmMinutos(189);
         filmeTres.avalia(10);
 
