@@ -1,6 +1,10 @@
 import br.com.rr.catalogofilmes.calculos.CalculadoraDeTempo;
+import br.com.rr.catalogofilmes.calculos.FiltroRecomendacao;
+import br.com.rr.catalogofilmes.modelos.Episodio;
 import br.com.rr.catalogofilmes.modelos.Filme;
 import br.com.rr.catalogofilmes.modelos.Serie;
+
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
@@ -38,6 +42,31 @@ public class Principal {
         calculadora.inclui(serieUm);
         System.out.println("Calculadora " + calculadora.getTempoTotal());
 
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filmeUm);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(serieUm);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
+
+        var filmeTres = new Filme("À Espera de um Milagre");
+        //filmeTres.setNome("À Espera de um Milagre");
+        filmeTres.setAnoDeLancamento(1999);
+        filmeTres.setDuracaoEmMinutos(189);
+        filmeTres.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeTres);
+        listaDeFilmes.add(filmeUm);
+        listaDeFilmes.add(filmeDois);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println(listaDeFilmes.get(0).toString());
+
+        Object objeto = filmeTres;
 
     }
 }

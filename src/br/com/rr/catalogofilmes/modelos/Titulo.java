@@ -59,3 +59,4 @@ public class Titulo {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 }
+
