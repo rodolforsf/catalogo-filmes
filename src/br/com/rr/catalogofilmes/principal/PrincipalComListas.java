@@ -4,9 +4,7 @@ import br.com.rr.catalogofilmes.modelos.Filme;
 import br.com.rr.catalogofilmes.modelos.Serie;
 import br.com.rr.catalogofilmes.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -18,7 +16,7 @@ public class PrincipalComListas {
         filmeTres.avalia(10);
         Serie serieUm = new Serie("La Casa de Papel", 2017);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeTres);
         lista.add(filmeUm);
         lista.add(filmeDois);
